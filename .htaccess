@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^([A-Za-z0-9-\+]+)/?$ index.php/?action=$1 [NC,L,QSA]
+RewriteRule ^([A-Za-z0-9-\+]+)/([0-9]+)/?$ index.php/?action=$1&articleId=$2 [NC,L,QSA]
+RewriteRule ^nav/([A-Za-z0-9-\+]+)/([0-9]+)/?$ index.php/?action=$1&startPoint=$2 [NC,L,QSA]
+RewriteRule ^([A-Za-z0-9-\+]+)/([A-Za-z0-9-\+]+)/?$ index.php/?action=$1&category=$2 [NC,L,QSA]
